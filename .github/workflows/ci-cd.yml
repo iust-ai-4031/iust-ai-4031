@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-and-release:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,9 +26,47 @@ jobs:
     - name: Build site
       run: bundle exec jekyll build
 
+    - name: Build gem
+      run: npm run gem-build
+
+    - name: Publish gem
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      run: npm run gem-push
+      env:
+        GEM_HOST_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
+
+    - name: Create release commit and tag
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        version=$(node -p "require('./package.json').version")
+        git add .
+        git commit -m "release: v$version"
+        git tag v$version
+
+    - name: Push changes
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
+        tags: true
+
     - name: Deploy to GitHub Pages
-      if: success() && github.event_name == 'push'
+      if: success() && github.event_name == 'push' && github.ref == 'refs/heads/main'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_site
+
+    - name: Create GitHub Release
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v${{ steps.package-version.outputs.version }}
+        release_name: Release v${{ steps.package-version.outputs.version }}
+        draft: false
+        prerelease: false
