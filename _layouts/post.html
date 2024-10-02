@@ -12,8 +12,8 @@ layout: article
       clientSecret: '{{ site.comments.gitalk.clientSecret }}',
       repo: '{{ site.comments.gitalk.repository }}',
       owner: '{{ site.comments.gitalk.owner }}',
-      admin: {{ site.comments.gitalk.admin | jsonify }},
-      id: '{{ page.url | truncate: 50, '' }}',
+      admin: '{{ site.comments.gitalk.admin | jsonify }}',
+      id: '{{ page.url | truncate: 50, "" }}',
       distractionFreeMode: false
     });
     gitalk.render('gitalk-container');
