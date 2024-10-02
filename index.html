@@ -1,0 +1,50 @@
+---
+layout: article
+title: >
+  هوش مصنوعی و سیستم‌های خبره
+  <h2>دانشگاه علم و صنعت ایران - پاییز ۱۴۰۳</h2>
+  <h3>دکتر آرش عبدی</h3>
+article_header:
+  type: overlay
+  theme: dark
+  background_color: '#203028'
+  background_image:
+    gradient: 'linear-gradient(135deg, rgba(34, 139, 87, .4), rgba(139, 34, 139, .4))'
+    src: /assets/images/iust_campus.jpg
+---
+
+<style>
+  .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero__content {
+    text-align: center;
+    color: #fff;
+  }
+  .post-list {
+    padding: 2rem 0;
+  }
+  .post-list__item {
+    margin-bottom: 2rem;
+  }
+</style>
+
+<div class="hero">
+  <div class="hero__content">
+    <h1>به درس هوش مصنوعی و سیستم‌های خبره خوش آمدید</h1>
+    <h2 class="subtitle course-title">وبلاگ درس هوش مصنوعی و سیستم‌های خبره در دانشگاه علم و صنعت ایران</h2>
+  </div>
+</div>
+
+<div class="post-list">
+  {% for post in site.posts %}
+    <article class="post-list__item">
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+      <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+      <a href="{{ post.url | relative_url }}">ادامه مطلب</a>
+    </article>
+  {% endfor %}
+</div>

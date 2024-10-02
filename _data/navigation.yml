@@ -1,0 +1,25 @@
+header:
+  - titles:
+      fa: خانه
+      en: Home
+    url: /
+  - titles:
+      fa: ارائه‌ها
+      en: Presentations
+    url: /presentations.html
+  - titles:
+      fa: تمرین‌ها
+      en: Exercises
+    url: /exercises.html
+  - titles:
+      fa: پروژه‌ها
+      en: Projects
+    url: /projects.html
+  - titles:
+      fa: درباره
+      en: About
+    url: /about.html
+  - titles:
+      fa: آرشیو
+      en: Archive
+    url: /archive.html

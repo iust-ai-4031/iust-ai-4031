@@ -1,0 +1,77 @@
+body,
+.article__content,
+.navigation__item,
+.hero__content,
+.post-list__item {
+  font-family: 'Vazirmatn', sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Vazirmatn', sans-serif;
+  font-weight: 700;
+}
+
+.hero__content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero__content .subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.navigation__items {
+  flex-direction: row-reverse;
+}
+
+.navigation__item {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+.article__content ul,
+.article__content ol {
+  padding-right: 2rem;
+  padding-left: 0;
+}
+
+.article__content blockquote {
+  border-left: none;
+  border-right: 4px solid #ddd;
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+.article__header {
+  text-align: right;
+}
+
+.article__footer {
+  direction: rtl;
+}
+
+.license {
+  text-align: right;
+}
+
+.search-bar__input {
+  direction: rtl;
+}
+
+.page__sidebar {
+  padding-right: 0;
+  padding-left: 1rem;
+}
+
+.toc {
+  direction: rtl;
+  text-align: right;
+}
+
+.toc ol {
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
