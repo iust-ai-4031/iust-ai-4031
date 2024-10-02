@@ -4,9 +4,9 @@ header:
       en: Home
     url: /
   - titles:
-      fa: ارائه‌ها
-      en: Presentations
-    url: /presentations.html
+      fa: اسلایدها
+      en: Slides
+    url: /slides.html
   - titles:
       fa: تمرین‌ها
       en: Exercises

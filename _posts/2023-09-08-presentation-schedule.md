@@ -1,6 +1,7 @@
 ---
 title: Presentation Schedule
 tags: Presentations
+comments: true
 ---
 
 Here's the schedule for student presentations throughout the semester:

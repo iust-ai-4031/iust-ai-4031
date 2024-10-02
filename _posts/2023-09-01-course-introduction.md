@@ -1,6 +1,7 @@
 ---
 title: Course Introduction
 tags: Introduction
+comments: true
 ---
 
 Welcome to هوش مصنوعی و سیستم های خبره! In this course, we will explore the fundamental concepts of AI and expert systems, their applications, and current trends in the field.
