@@ -48,15 +48,15 @@ author:
   zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
   linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
-  github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+  github    : https://github.com/MSNP1381 # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: boursaro
+repository: boursaro/boursaro.github.io
 repository_tree: master
-
+issues_repo: boursaro/boursaro.github.io
 
 ## => Paths
 ##############################
@@ -139,12 +139,13 @@ sharing:
 comments:
   provider: gitalk
   gitalk:
-    clientID    : # GitHub Application Client ID
-    clientSecret: # GitHub Application Client Secret
-    repository  : # GitHub repo
-    owner       : # GitHub repo owner
+    clientID    : Ov23liO0ojOKxnFN9lCC # GitHub Application Client ID
+    clientSecret: 11a6eec113d33717cc769d8c4f7445b4a5a2213a # GitHub Application Client Secret
+    repository  : boursaro.github.io
+    owner       : MSNP1381
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-      - your_github_username
+      - boursaro
+      - MSNP1381
 
 
 ## => Pageview
