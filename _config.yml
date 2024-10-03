@@ -48,15 +48,15 @@ author:
   zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
   linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
-  github    : https://github.com/boursaro # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+  github    : https://github.com/iust-ai-4031 # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: boursaro/boursaro.github.io
+repository: iust-ai-4031/iust-ai-4031.github.io
 repository_tree: main
-issues_repo: boursaro/boursaro.github.io
+issues_repo: iust-ai-4031/iust-ai-4031.github.io
 
 ## => Paths
 ##############################
@@ -141,10 +141,10 @@ comments:
   gitalk:
     clientID    : Ov23liO0ojOKxnFN9lCC # GitHub Application Client ID
     clientSecret: 11a6eec113d33717cc769d8c4f7445b4a5a2213a # GitHub Application Client Secret
-    repository  : boursaro.github.io
-    owner       : boursaro
+    repository  : iust-ai-4031/iust-ai-4031.github.io
+    owner       : iust-ai-4031
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-      - boursaro
+      - iust-ai-4031
       - MSNP1381
 
 
